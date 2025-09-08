@@ -14,7 +14,7 @@ class User(db.Model, UserMixin):
             "id": self.id,
             "username": self.username,
             "email": self.email,
-            "is_admin": self.is_admi
+            "is_admin": self.is_admin
         }
     
 class Category(db.Model):
