@@ -66,10 +66,10 @@ methods: {
               localStorage.setItem('username', data.user.username);
               if (data.user.is_admin) {
                 localStorage.setItem('is_admin', 'true');
-                this.$router.push('/login');
+                this.$router.push('/home');
               } else {
                 localStorage.setItem('is_admin', 'false');
-                this.$router.push('/login');
+                this.$router.push('/home');
               }
               window.location.reload();
               alert('Login successful!');
