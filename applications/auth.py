@@ -62,11 +62,8 @@ def login():
 
     if not user or not check_password_hash(user.password_hash, data['password']):
         return jsonify({"message": "Invalid email or password"}), 401
-    
-    if user.is_admin:
-        additional_claims = {"role": "admin"}
-    else:
-        additional_claims = {"role": "user"}
+
+    additional_claims = {"is_admin": user.is_admin}
 
     access_token = create_access_token(identity=str(user.id), additional_claims=additional_claims)
     refresh_token = create_refresh_token(identity=str(user.id), additional_claims=additional_claims)

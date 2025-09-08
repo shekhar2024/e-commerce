@@ -38,9 +38,9 @@ with app.app_context():
     db.session.commit() 
 
 
-
 from applications.auth import *
 from applications.routes import *
+
 
 if __name__ == '__main__':
     app.run()
