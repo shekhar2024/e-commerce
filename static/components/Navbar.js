@@ -14,6 +14,9 @@ export default {
           <li v-if="!isLoggedIn" class="nav-item">
             <router-link class="nav-link" to="/login">Login</router-link>
           </li>
+          <li v-if="!isLoggedIn" class="nav-item">
+            <router-link class="nav-link" to="/register">Register</router-link>
+          </li>
           <li v-if="isLoggedIn && isAdmin" class="nav-item">
             <router-link class="nav-link" to="/home">Home</router-link>
           </li>

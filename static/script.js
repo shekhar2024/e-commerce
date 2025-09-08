@@ -1,10 +1,12 @@
 import Login from './components/Login.js';
 import Home from './components/Home.js';
 import Navbar from './components/Navbar.js';
+import Register from './components/Register.js';
 
 const routes = [
     { path: '/login', component: Login },
-    { path: '/home', component: Home }
+    { path: '/home', component: Home },
+    { path: '/register', component: Register }
 ]
 
 const router = new VueRouter({
